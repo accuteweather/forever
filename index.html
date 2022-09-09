@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top">
+        <img class="logo" src="images/logo.png" >
+        <a href="about.html">About</a>
+        <a href="weather.html">Weather</a>
+        <a href="index.html">Home</a>
+        <a href="index.html" class="main">Weather4ever</a>
+    </div>
+    <div class="container">
+        <h1 id="time-now"></h1>
+    </div>
+     <div class="min">
+        <div class="Inbox">
+            <img src="https://res.cloudinary.com/bit-blog/image/upload/c_scale,w_718,h_502,dpr_2/f_webp,q_auto/v1601921254/15-1.webp?_i=AA"></img><center>
+                <a href="weather.html"><button class="btn-enq" value="Check Weather">Check weather</button></a>
+            </center>
+        </div>
+    <script>
+        let time=document.getElementById("time-now")
+        setInterval(()=>{
+            
+            let d=new Date();
+            time.innerHTML=d.toLocaleTimeString().slice(0,4)+ " " + d.toLocaleTimeString().slice(-2);
+            
+        },1000)
+        </script>
+</body>
+</html>
